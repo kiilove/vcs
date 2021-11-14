@@ -6,12 +6,20 @@ import { lincone } from "../styles/common";
 import { BorderWithRadiusMaker, FlexBox } from "../styles/components";
 const Home = () => {
   return (
-    <Grid container>
+    <Grid
+      container
+      spacing={2}
+      sx={{ backgroundColor: lincone.pallette.background }}
+    >
       <Grid item xs={12}>
         <Header />
       </Grid>
-      <Grid item xs={12}>
-        <Diary />
+      <Grid item container xs={12}>
+        <Grid item xs={2} md={0} lg={1.5}></Grid>
+        <Grid item xs={8} md={12} lg={9}>
+          <Diary />
+        </Grid>
+        <Grid item xs={2} md={0} lg={1.5}></Grid>
       </Grid>
       <Grid item xs={12}></Grid>
     </Grid>

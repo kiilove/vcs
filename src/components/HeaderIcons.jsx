@@ -2,17 +2,21 @@ import React from "react";
 import { FlexBox } from "../styles/components";
 import { faBell, faCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box } from "@mui/system";
 
 const HeaderIcons = () => {
   return (
-    <FlexBox>
-      <FlexBox flex="1">
+    <Box sx={{ display: "flex" }}>
+      <Box flex="1">
         <FontAwesomeIcon icon={faBell} />
-      </FlexBox>
-      <FlexBox flex="1">
+      </Box>
+      <Box flex="1">
         <FontAwesomeIcon icon={faCog} />
-      </FlexBox>
-    </FlexBox>
+      </Box>
+      <Box flex="1">
+        <FontAwesomeIcon icon={faCog} />
+      </Box>
+    </Box>
   );
 };
 

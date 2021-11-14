@@ -1,10 +1,21 @@
-import { blueGrey, grey } from "@material-ui/core/colors";
+import { blueGrey, grey } from "@mui/material/colors";
 import React from "react";
 import styled from "styled-components";
 
 // function makeProps(items, type, base) {
 //   return `${(items) => (items.type ? items.type : base)}`;
 // }
+export const ItemDiv = styled.div`
+  display: flex;
+  width: ${(props) => (props.width ? props.width : "100%")};
+  height: 100%;
+`;
+
+export const FlexDiv = styled.div`
+  display: flex;
+  width: ${(props) => (props.width ? props.width : "100%")};
+  height: 100%;
+`;
 
 export const Wrapper = styled.div`
   width: 100%;
