@@ -31,27 +31,6 @@ const ClientBasicInfo = () => {
               spacing={1}
               sx={{
                 flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                <Avatar sx={{ width: "130px", height: "130px" }}>4643</Avatar>
-              </Box>
-              <Box>
-                <Button>사진추가</Button>
-              </Box>
-            </Stack>
-            <Stack
-              spacing={1}
-              sx={{
-                flex: 4,
               }}
             >
               <Box
@@ -88,7 +67,7 @@ const ClientBasicInfo = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    width: "65%",
+                    width: "70%",
                     border: `1px solid ${blueGrey[100]}`,
                     borderRadius: 5,
                     p: 1,
