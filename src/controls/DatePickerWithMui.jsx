@@ -19,7 +19,7 @@ export const DatePickerWithMui = () => {
             setDateValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} size="small" sx={{ width: 140 }} />
+            <TextField {...params} size="small" sx={{ width: "90%" }} />
           )}
         />
       </LocalizationProvider>
@@ -37,7 +37,7 @@ export const TimePickerWithMui = () => {
           value={timeValue}
           onChange={(newValue) => setTimeValue(newValue)}
           renderInput={(params) => (
-            <TextField {...params} size="small" sx={{ width: 140, ml: 1.3 }} />
+            <TextField {...params} size="small" sx={{ width: "90%" }} />
           )}
         />
       </LocalizationProvider>
