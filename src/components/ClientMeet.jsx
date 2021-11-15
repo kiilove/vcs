@@ -28,13 +28,13 @@ const ClientMeet = () => {
   const DatePickerMui = (
     <LocalizationProvider dateAdapter={AdapterDateFns} locale={koLocale}>
       <DatePicker
-        label="날짜"
+        label="날짜(YYYY.MM.DD)"
         value={dateValue}
         onChange={(newValue) => {
           setDateValue(newValue);
         }}
         renderInput={(params) => (
-          <TextField {...params} size="small" sx={{ width: "48.5%", ml: 1 }} />
+          <TextField {...params} size="small" sx={{ width: "50%" }} />
         )}
       />
     </LocalizationProvider>
@@ -42,105 +42,82 @@ const ClientMeet = () => {
   const TimePickerMui = (
     <LocalizationProvider dateAdapter={AdapterDateFns} locale={koLocale}>
       <TimePicker
-        label={"24시간"}
+        label="미팅시간(24H)"
         ampm={false}
         value={timeValue}
         onChange={(newValue) => setTimeValue(newValue)}
         renderInput={(params) => (
-          <TextField {...params} size="small" sx={{ width: "48.5%", ml: 1 }} />
+          <TextField {...params} size="small" sx={{ width: "50%", ml: 2 }} />
         )}
       />
     </LocalizationProvider>
   );
   return (
     <Stack spacing={1}>
-      <Paper sx={{ width: "100%", height: "100%", pt: 2, pb: 2 }}>
-        <Box sx={{ height: "50px" }}>
-          <Typography variant="h6" textAlign="left" sx={{ ml: 4 }}>
-            일정 추가
-          </Typography>
-          <Divider sx={{ mb: 1, mt: 1 }} />
-        </Box>
-        <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
-          <Stack
-            sx={{
-              flex: 1,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Box
+      <Paper sx={{ width: "100%", height: "100%" }}>
+        <Box sx={{ p: 3 }}>
+          <Box sx={{ height: "50px" }}>
+            <Typography variant="h6" textAlign="left" sx={{ fontWeight: 700 }}>
+              미팅
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
+            <Stack
+              spacing={1}
               sx={{
-                display: "flex",
-                width: "100%",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "flex-end",
-              }}
-            >
-              <Typography sx={{ mr: 1 }}>약속 일정</Typography>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                width: "100%",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "flex-end",
-              }}
-            >
-              <Typography sx={{ mr: 1 }}>일정준비사항</Typography>
-            </Box>
-          </Stack>
-          <Stack
-            spacing={1}
-            sx={{
-              flex: 4,
+                flex: 4,
 
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                width: "100%",
+                justifyContent: "center",
                 alignItems: "center",
-                justifyContent: "flex-start",
               }}
             >
-              {DatePickerMui}
-              {TimePickerMui}
-            </Box>
-            <Box
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                }}
+              >
+                {DatePickerMui}
+                {TimePickerMui}
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <TextField
+                  size="small"
+                  fullWidth
+                  sx={{ width: "100%" }}
+                  multiline
+                  maxRows={2}
+                  label="미팅전 준비사항"
+                />
+              </Box>
+            </Stack>
+            <Stack
               sx={{
-                display: "flex",
-                width: "100%",
-                alignItems: "center",
-                justifyContent: "flex-start",
-              }}
-            >
-              <TextField
-                size="small"
-                fullWidth
-                sx={{ width: "100%", ml: 1 }}
-                multiline
-                maxRows={2}
-              />
-            </Box>
-          </Stack>
-          <Stack
-            sx={{
-              flex: 1,
+                flex: 1,
 
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Button variant="outlined" sx={{ width: "90%", height: "100%" }}>
-              등록
-            </Button>
-          </Stack>
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box sx={{ width: "100%", height: "100%" }}>
+                <Button
+                  variant="outlined"
+                  sx={{ width: "90%", height: "100%" }}
+                >
+                  등록
+                </Button>
+              </Box>
+            </Stack>
+          </Box>
         </Box>
       </Paper>
     </Stack>

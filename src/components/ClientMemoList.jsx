@@ -12,70 +12,55 @@ import React from "react";
 import { FlexBox, ItemDiv } from "../styles/components";
 const ClientMemoList = () => {
   return (
-    <Stack>
+    <Stack spacing={1}>
       <Paper sx={{ width: "100%", height: "100%" }}>
-        <Stack spacing={1} sx={{ flexGrow: 1, p: 3, mb: 1 }}>
-          <ItemDiv style={{ height: "50px" }}>
-            <Box
+        <Box sx={{ p: 3 }}>
+          <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
+            <Stack
+              direction="row"
+              spacing={1}
               sx={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                ml: 1,
-              }}
-            >
-              <Typography variant="h6">메모 목록</Typography>
-            </Box>
-          </ItemDiv>
-          {/* 아이템별 박스 시작 */}
-          <ItemDiv>
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "flex-start",
+                flex: 4,
+
+                justifyContent: "center",
                 alignItems: "center",
               }}
             >
-              <Stack>
-                <Rating
-                  name="half-rating"
-                  defaultValue={2.5}
-                  precision={0.5}
-                  sx={{ mb: 1 }}
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <TextField
+                  size="small"
+                  fullWidth
+                  sx={{ width: "100%" }}
+                  label="한줄메모"
                 />
-                <Stack direction="row">
-                  <TextField
-                    multiline
-                    minRows={1}
-                    maxRows={2}
-                    sx={{ width: 320 }}
-                    size="small"
-                  />
-                  <Button variant="outlined" sx={{ width: 70, ml: 3 }}>
-                    작성
-                  </Button>
-                </Stack>
-              </Stack>
-            </Box>
-          </ItemDiv>
-          {/* 아이템별 박스 끝*/}
-          {/* 아이템별 박스 시작 */}
-          <ItemDiv>
-            <Box
+              </Box>
+            </Stack>
+            <Stack
               sx={{
                 flex: 1,
-                display: "flex",
-                justifyContent: "flex-start",
+
+                justifyContent: "center",
                 alignItems: "center",
               }}
             >
-              <Stack sx={{ flex: 1 }}>여기에 리스트</Stack>
-            </Box>
-          </ItemDiv>
-          {/* 아이템별 박스 끝*/}
-        </Stack>
+              <Box sx={{ width: "100%", height: "100%" }}>
+                <Button
+                  variant="outlined"
+                  sx={{ width: "90%", height: "100%" }}
+                >
+                  등록
+                </Button>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
       </Paper>
     </Stack>
   );

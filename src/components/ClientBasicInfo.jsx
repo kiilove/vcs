@@ -1,83 +1,152 @@
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Avatar,
+  Button,
   FormControl,
   FormControlLabel,
-  FormLabel,
   Paper,
   Radio,
   RadioGroup,
   Stack,
   Typography,
 } from "@mui/material";
-import { blue, grey, lightGreen } from "@mui/material/colors";
-import { makeStyles, styled } from "@mui/styles";
+import { blue, blueGrey, green, pink } from "@mui/material/colors";
 import { Box } from "@mui/system";
 import React from "react";
-import ClientStatusMini from "./ClientStatusMini";
-
-const ClientAvatar = {
-  width: { sx: "50px", md: "80px", lg: "100px" },
-  height: { sx: "50px", md: "80px", lg: "100px" },
-  color: { sx: blue, md: lightGreen, lg: grey },
-};
-
-const useStyle = makeStyles({
-  avatar: {
-    width: { xs: "50px", lg: "100px" },
-  },
-});
 
 const ClientBasicInfo = () => {
-  const classes = useStyle();
   return (
     <Stack spacing={1}>
       <Paper sx={{ width: "100%", height: "100%" }}>
-        <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
-          <Stack
+        <Box sx={{ pt: 3, pb: 3, pl: 5, pr: 5 }}>
+          <Box
             sx={{
-              flex: 1,
-              backgroundColor: "whitesmoke",
-              justifyContent: "center",
-              alignItems: "center",
+              display: "flex",
+              width: "100%",
+              height: "100%",
             }}
           >
-            <Box>
-              <Avatar />
-            </Box>
-          </Stack>
-          <Stack sx={{ flex: 5 }}>
-            <Box>
-              <Typography>010-4643-3464</Typography>
-            </Box>
-            <Box>
-              <Typography>등록일자:2021.11.03</Typography>
-            </Box>
-            <Box>
-              <FormControl component="fieldset">
-                <RadioGroup
-                  row
-                  aria-label="gender"
-                  name="row-radio-buttons-group"
+            <Stack
+              spacing={1}
+              sx={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <Avatar sx={{ width: "130px", height: "130px" }}>4643</Avatar>
+              </Box>
+              <Box>
+                <Button>사진추가</Button>
+              </Box>
+            </Stack>
+            <Stack
+              spacing={1}
+              sx={{
+                flex: 4,
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  pt: 2,
+                  pb: 2,
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
+                <Typography variant="h4">010-4643-3464</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  width: "100%",
+                }}
+              >
+                <Typography variant="h6">2021.11.03 등록</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  p: 1,
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "65%",
+                    border: `1px solid ${blueGrey[100]}`,
+                    borderRadius: 5,
+                    p: 1,
+                  }}
                 >
-                  <FormControlLabel
-                    value="female"
-                    control={<Radio />}
-                    label="확인중"
-                  />
-                  <FormControlLabel
-                    value="male"
-                    control={<Radio />}
-                    label="진행중"
-                  />
-                  <FormControlLabel
-                    value="other"
-                    control={<Radio />}
-                    label="중지됨"
-                  />
-                </RadioGroup>
-              </FormControl>
-            </Box>
-          </Stack>
+                  <FormControl component="fieldset">
+                    <RadioGroup row name="row-radio-buttons-group">
+                      <FormControlLabel
+                        value="standby"
+                        control={
+                          <Radio
+                            sx={{
+                              color: green[800],
+                              "&.Mui-checked": {
+                                color: green[600],
+                              },
+                            }}
+                          />
+                        }
+                        label="확인중"
+                        sx={{ color: green[800] }}
+                      />
+                      <FormControlLabel
+                        value="ing"
+                        control={
+                          <Radio
+                            sx={{
+                              color: blue[800],
+                              "&.Mui-checked": {
+                                color: blue[600],
+                              },
+                            }}
+                          />
+                        }
+                        label="진행중"
+                        sx={{ color: blue[800] }}
+                      />
+                      <FormControlLabel
+                        value="stop"
+                        control={
+                          <Radio
+                            sx={{
+                              color: pink[800],
+                              "&.Mui-checked": {
+                                color: pink[600],
+                              },
+                            }}
+                          />
+                        }
+                        label="중지"
+                        sx={{ color: pink[800] }}
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </Box>
+              </Box>
+            </Stack>
+          </Box>
         </Box>
       </Paper>
     </Stack>
