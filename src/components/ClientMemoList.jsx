@@ -10,6 +10,7 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import { FlexBox, ItemDiv } from "../styles/components";
+import ClientMemoGrid from "./ClientMemoGrid";
 const ClientMemoList = () => {
   return (
     <Stack spacing={1}>
@@ -61,6 +62,7 @@ const ClientMemoList = () => {
             </Stack>
           </Box>
         </Box>
+        <ClientMemoGrid />
       </Paper>
     </Stack>
   );
