@@ -17,7 +17,7 @@ import {
 } from "@mui/material/colors";
 import { Box } from "@mui/system";
 
-const DairyLeft = (props) => {
+const DairyClientList = (props) => {
   console.log(props);
   return (
     <>
@@ -55,4 +55,4 @@ const DairyLeft = (props) => {
   );
 };
 
-export default DairyLeft;
+export default DairyClientList;

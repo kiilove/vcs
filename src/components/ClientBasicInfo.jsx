@@ -18,8 +18,8 @@ import React from "react";
 const ClientBasicInfo = () => {
   return (
     <Stack spacing={1}>
-      <Paper sx={{ width: "100%", height: "100%" }}>
-        <Box sx={{ pt: 3, pb: 3, pl: 5, pr: 5 }}>
+      <Paper elevation={0} sx={{ width: "100%", height: "100%", pb: 2 }}>
+        <Box sx={{ pt: 1, pb: 1, pl: 5, pr: 5 }}>
           <Box
             sx={{
               display: "flex",
@@ -36,8 +36,8 @@ const ClientBasicInfo = () => {
               <Box
                 sx={{
                   display: "flex",
-                  pt: 2,
-                  pb: 2,
+                  pt: 1,
+                  pb: 1,
                   justifyContent: "center",
                   width: "100%",
                 }}
@@ -59,7 +59,6 @@ const ClientBasicInfo = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   width: "100%",
-                  p: 1,
                 }}
               >
                 <Box

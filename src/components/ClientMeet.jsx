@@ -54,7 +54,7 @@ const ClientMeet = () => {
   );
   return (
     <Stack spacing={1}>
-      <Paper sx={{ width: "100%", height: "100%" }}>
+      <Paper elevation={0} sx={{ width: "100%", height: "100%" }}>
         <Box sx={{ p: 3 }}>
           <Box sx={{ height: "50px" }}>
             <Typography variant="h6" textAlign="left" sx={{ fontWeight: 700 }}>

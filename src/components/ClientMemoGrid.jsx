@@ -61,6 +61,7 @@ const MemoData = [
   createData("오늘 온다고 해놓고 쌩깠음7", "2021.11.01", 7),
   createData("오늘 온다고 해놓고 쌩깠음8", "2021.11.01", 8),
   createData("오늘 온다고 해놓고 쌩깠음9", "2021.11.01", 9),
+  createData("오늘 온다고 해놓고 쌩깠음10", "2021.11.01", 10),
 ];
 
 const PrevPageIcon = (
@@ -81,7 +82,7 @@ const NextPageIcon = (
 
 const ClientMemoGrid = () => {
   const classes = useStyles();
-  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
   const [currentItems, setCurrentItems] = useState(MemoData.slice(0, 4));
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
@@ -103,10 +104,14 @@ const ClientMemoGrid = () => {
   }, [itemOffset, itemsPerPage]);
   return (
     <Stack spacing={1}>
-      <Box sx={{ p: 3 }}>
+      <Box sx={{ pl: 3, pr: 3 }}>
         <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
           <TableContainer component={Box}>
-            <Table sx={{ minWidth: 530 }} aria-label="simple table">
+            <Table
+              sx={{ minWidth: 530 }}
+              aria-label="simple table"
+              size="small"
+            >
               <TableHead>
                 <TableRow>
                   <TableCell>메모</TableCell>

@@ -4,6 +4,7 @@ import Diary from "../components/Diary";
 import Header from "../components/Header";
 import { lincone } from "../styles/common";
 import { BorderWithRadiusMaker, FlexBox } from "../styles/components";
+import { Routes, Route, Link } from "react-router-dom";
 const Home = () => {
   return (
     <Grid

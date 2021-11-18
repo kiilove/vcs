@@ -5,6 +5,9 @@
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.11.0",
+    "@devexpress/dx-react-core": "^2.7.6",
+    "@devexpress/dx-react-scheduler": "^2.7.6",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.6",
     "@emotion/react": "^11.5.0",
     "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.3.0",
@@ -23,6 +26,7 @@
     "react-dom": "^17.0.2",
     "react-live-clock": "^5.3.1",
     "react-paginate": "^8.0.0",
+    "react-router-dom": "6",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"

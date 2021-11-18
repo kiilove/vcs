@@ -14,7 +14,7 @@ import ClientMemoGrid from "./ClientMemoGrid";
 const ClientMemoList = () => {
   return (
     <Stack spacing={1}>
-      <Paper sx={{ width: "100%", height: "100%" }}>
+      <Paper elevation={0} sx={{ width: "100%", height: "100%" }}>
         <Box sx={{ p: 3 }}>
           <Box sx={{ display: "flex", width: "100%", height: "100%" }}>
             <Stack
