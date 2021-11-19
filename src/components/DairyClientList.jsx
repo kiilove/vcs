@@ -17,6 +17,8 @@ import {
 } from "@mui/material/colors";
 import { Box } from "@mui/system";
 
+import ClientList from "./ClientList";
+
 const DairyClientList = (props) => {
   console.log(props);
   return (
@@ -46,7 +48,9 @@ const DairyClientList = (props) => {
               }}
               spacing={2}
             >
-              <Box sx={{ width: "90%", pt: 2 }}></Box>
+              <Box sx={{ width: "90%", pt: 2, height: "100%" }}>
+                <ClientList />
+              </Box>
             </Stack>
           </Stack>
         </Stack>
