@@ -170,8 +170,8 @@ const ClientListGrid = () => {
                             justifyContent: "space-around",
                           }}
                         >
-                          <ClearIcon sx={{ color: blue[500] }} />
-                          <FavoriteBorderIcon sx={{ color: pink[500] }} />
+                          <ClearIcon sx={{ color: grey[500] }} />
+                          <FavoriteBorderIcon sx={{ color: grey[500] }} />
                         </Box>
                       </Stack>
                     </TableCell>
